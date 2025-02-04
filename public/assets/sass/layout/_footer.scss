@@ -1,0 +1,98 @@
+.footer {
+    background: url('../media/backgrounds/footer-bg.jpg') no-repeat;
+    padding: clamp(48px, 4.167vw, 160px) 0 clamp(18px, 1.25vw, 48px) 0;
+    background-size: cover;
+    background-position: right;
+
+    .link-wrapper {
+        padding: clamp(24px, 2.5vw, 96px) 0;
+        border-top: 1px dashed $accent-1;
+        border-bottom: 1px dashed $accent-1;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            transition: $transition;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: $gap-8;
+
+            .link-icon {
+                width: clamp(40px, 2.5vw, 54px);
+                height: clamp(40px, 2.5vw, 54px);
+                border-radius: 50%;
+                border: 1px solid $accent-1;
+                transition: $transition;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    width: clamp(18px, 1.25vw, 48px);
+                    height: clamp(18px, 1.25vw, 48px);
+
+                    path {
+                        transition: $transition;
+                    }
+                }
+
+                &:hover {
+                    background-color: $accent-1;
+
+                    svg {
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .newsletter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: $gap-16;
+        border-bottom: 1px solid $light-gray;
+
+        input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            color: $light-gray;
+
+            &:focus {
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $light-gray;
+                font-size: clamp(18px, 1.198vw, 48px);
+            }
+        }
+
+        svg {
+            transition: $transition;
+
+            path {
+                transition: $transition;
+            }
+        }
+
+        svg {
+            &:hover {
+                path {
+                    stroke: $accent-1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.about-sec {
+    position: relative;
+
+    .truck-vector {
+        position: absolute;
+        right: clamp(28px, 1.979vw, 76px);
+        bottom: -12%;
+        width: clamp(200px, 20.833vw, 576px);
+        height: clamp(200px, 15.902vw, 576px);
+
+        @include media-query(777px) {
+            display: none;
+        }
+    }
+
+    .about-bg-wrapper {
+        position: relative;
+
+        .about-img {
+            @include media-query(777px) {
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+
+        .wrapper-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            .wrap-line {
+                width: 24px;
+                height: 1px;
+                background-color: $white;
+            }
+        }
+    }
+
+    .about-slider {
+        margin: 12px 0;
+    }
+
+    .about-slider-wrapper {
+        margin-top: clamp(-48px, -4.167vw, -160px);
+    }
+
+    .slider-block-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: $gap-24;
+    }
+
+    .accordion {
+        margin-top: clamp(48px, 4.167vw, 160px);
+
+
+        .accordion-button {
+            padding: $gap-24 0;
+            padding-left: 0;
+            background-color: transparent;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .accordion-body {
+            &:focus {
+                box-shadow: none;
+            }
+
+            padding: $gap-24 0;
+            padding-left: 0;
+        }
+
+        .accordion-item {
+            &:focus {
+                box-shadow: none;
+            }
+
+            .accordion-button {
+                &:focus {
+                    box-shadow: none;
+                }
+
+                padding: $gap-24 0;
+                padding-left: 0;
+                background-color: transparent;
+            }
+
+            .accordion-body {
+                padding: $gap-24 0;
+                padding-left: 0;
+            }
+
+        }
+    }
+}

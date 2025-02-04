@@ -1,0 +1,38 @@
+.title-banner {
+    background: url('../media/backgrounds/tite-banner.png') no-repeat;
+    // background-position: center;
+    background-size: cover;
+    position: relative;
+
+    .content {
+        height: auto;
+
+        @include media-query(1199px) {
+            height: auto;
+        }
+
+        .center {
+            h1 {
+                text-align: center;
+                color: $white;
+                font-family: $font-primary;
+                font-size: clamp(42px, 4.167vw, 160px);
+                font-style: normal;
+                font-weight: 800;
+                line-height: 120%;
+                /* 96px */
+                letter-spacing: -2.4px;
+                text-transform: uppercase;
+
+                @include media-query(580px) {
+                    letter-spacing: 1px;
+                }
+
+                &.stroke-text {
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: 2px $white;
+                }
+            }
+        }
+    }
+}
