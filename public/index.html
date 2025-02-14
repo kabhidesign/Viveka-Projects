@@ -42,7 +42,7 @@
 		<div class="nav-switch">
 			<i class="fa fa-bars"></i>
 		</div>
-		<div class="phone-number">+91 7010326584</div>
+		<div class="phone-number">+91 11111111111</div>
 		<nav class="nav-menu">
 			<ul>
 				<li class="active"><a href="index.html">Home</a></li>
@@ -243,19 +243,19 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="milestone">
 						<h2>180</h2>
-						<p>Architecture<br>Projects</p>
+						<p>Architect<br>Taken</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="milestone">
-						<h2>100+</h2>
-						<p>Interior <br>Works</p>
+						<h2>140</h2>
+						<p>Interior <br>Teken</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="milestone">
-						<h2>98</h2>
-						<p>Construction <br>Works</p>
+						<h2>12</h2>
+						<p>Awards <br>Won</p>
 					</div>
 				</div>
 			</div>
@@ -321,17 +321,172 @@
 			</div>
 		</div>
 	</div>
-	<!-- Projects section end -->
-	 <!-- Call to Action section start -->
-<section class="cta-section spad py-5 bg-dark text-white text-center">
-    <div class="container">
-        <h2 class="sp-title display-4 fw-bold">Ready to Build Your Dream Project?</h2>
-        <p class="fs-5 mb-4">Connect with Viveka Projects for expert design and construction solutions. Let's transform your vision into reality.</p>
-        <a href="#contact" class="btn btn-primary btn-lg">Get a Free Consultation</a>
-    </div>
-</section>
-<!-- Call to Action section end -->
-
+	
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+		<!-- SweetAlert2 for better alerts -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	
+		<style>
+			.modal-header .btn-close {
+				position: absolute;
+				top: 10px;
+				right: 15px;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<section class="cta-section py-5 text-center" style="background: linear-gradient(135deg, #141e30, #243b55);">
+			<div class="container">
+				<h2 class="display-4 fw-bold text-white text-uppercase">Ready to Build Your Dream Project?</h2>
+				<p class="fs-5 mb-4 text-light">
+					Connect with <span class="fw-bold">Viveka Projects</span> for expert design and construction solutions. 
+					Let's transform your vision into reality.
+				</p>
+				<button class="btn btn-warning btn-lg fw-bold shadow-lg" data-bs-toggle="modal" data-bs-target="#popupForm">
+					Get a Free Consultation
+				</button>
+			</div>
+		</section>
+	
+		<!-- Bootstrap Modal -->
+		<div class="modal fade" id="popupForm" tabindex="-1" aria-labelledby="popupFormLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Get a Free Consultation</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form id="consultationForm">
+							<div class="mb-3">
+								<label class="form-label">First Name</label>
+								<input type="text" class="form-control" id="firstName" required>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">WhatsApp Number</label>
+								<input type="text" class="form-control" id="whatsappNumber" required>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Email ID</label>
+								<input type="email" class="form-control" id="email" required>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Place (Tamil Nadu Districts)</label>
+								<select class="form-select" id="place" required>
+									<option value="" disabled selected>Select Your District</option>
+									<option value="Chennai">Chennai</option>
+									<option value="Coimbatore">Coimbatore</option>
+									<option value="Madurai">Madurai</option>
+									<option value="Trichy">Trichy</option>
+									<option value="Salem">Salem</option>
+									<option value="Erode">Erode</option>
+									<option value="Vellore">Vellore</option>
+									<option value="Tirunelveli">Tirunelveli</option>
+									<option value="Kanyakumari">Kanyakumari</option>
+									<option value="Thanjavur">Thanjavur</option>
+								</select>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Services Required</label>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="Architecture" id="architecture">
+									<label class="form-check-label" for="architecture">Architecture</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="Interior" id="interior">
+									<label class="form-check-label" for="interior">Interior</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="Structure" id="structure">
+									<label class="form-check-label" for="structure">Structure</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="MEP" id="mep">
+									<label class="form-check-label" for="mep">MEP</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="PMC" id="pmc">
+									<label class="form-check-label" for="pmc">PMC</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="Renovation" id="renovation">
+									<label class="form-check-label" for="renovation">Renovation</label>
+								</div>
+							</div>
+							<div class="text-center">
+								<button type="submit" class="btn btn-success w-100">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	
+		<!-- Firebase -->
+		<script type="module">
+		// Import required Firebase modules
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+		import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js";
+	  
+		// Firebase configuration
+		const firebaseConfig = {
+		  apiKey: "AIzaSyAnwJrcsgsnoRjeffMDu1nSbgile52JppY",
+		  authDomain: "viveka-projects.firebaseapp.com",
+		  databaseURL: "https://viveka-projects-default-rtdb.firebaseio.com",
+		  projectId: "viveka-projects",
+		  storageBucket: "viveka-projects.appspot.com",
+		  messagingSenderId: "566585014933",
+		  appId: "1:566585014933:web:276da3c862aea4a10fb99c",
+		  measurementId: "G-273HBFF6SG"
+		};
+			const app = initializeApp(firebaseConfig);
+			const database = getDatabase(app);
+	
+			document.getElementById("consultationForm").addEventListener("submit", function(event) {
+				event.preventDefault();
+	
+				const firstName = document.getElementById("firstName").value.trim();
+				const whatsappNumber = document.getElementById("whatsappNumber").value.trim();
+				const email = document.getElementById("email").value.trim();
+				const place = document.getElementById("place").value.trim();
+				let selectedServices = [];
+				document.querySelectorAll(".form-check-input:checked").forEach((checkbox) => {
+					selectedServices.push(checkbox.value);
+				});
+	
+				if (!firstName || !whatsappNumber || !email || !place || selectedServices.length === 0) {
+					Swal.fire({ title: "Error!", text: "Please fill out all fields before submitting.", icon: "error" });
+					return;
+				}
+	
+				const consultationRef = push(ref(database, "consultations"));
+	
+				set(consultationRef, {
+					firstName,
+					whatsappNumber,
+					email,
+					place,
+					services: selectedServices,
+					timestamp: new Date().toISOString()
+				}).then(() => {
+					Swal.fire({ title: "Success!", text: "Your form has been submitted.", icon: "success" }).then(() => {
+						document.getElementById("consultationForm").reset();
+						let modal = bootstrap.Modal.getInstance(document.getElementById('popupForm'));
+						modal.hide();
+					});
+				}).catch((error) => {
+					Swal.fire({ title: "Error!", text: "Something went wrong.", icon: "error" });
+					console.error("Error saving to Firebase:", error);
+				});
+			});
+		</script>
+	
 
 
 	<!-- Clients section start -->
